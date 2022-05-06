@@ -1,7 +1,9 @@
 import numpy as np
 from numba_mpi import rank, size, send, recv
+from numba import njit
 
 
+@njit
 def do_work(a):
     r = rank()
     s = size()
